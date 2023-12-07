@@ -17,9 +17,8 @@ import jakarta.persistence.MappedSuperclass;
 // @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class Computer {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected long Id;
-    protected String type;
+    protected String name;
 
     public long getId() {
         return Id;
@@ -29,12 +28,12 @@ public abstract class Computer {
         Id = id;
     }
 
-    public String getType() {
-        return type;
+    public String getName() {
+        return name;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setName(String name) {
+        this.name = name;
     }
 
 }

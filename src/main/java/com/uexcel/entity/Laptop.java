@@ -23,4 +23,9 @@ public class Laptop extends Computer {
         this.price = price;
     }
 
+    @Override
+    public String toString() {
+        return "Laptop [brand=" + brand + ", price=" + price + "]";
+    }
+
 }

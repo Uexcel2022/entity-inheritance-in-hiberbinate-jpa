@@ -1,6 +1,9 @@
 package com.uexcel.entity;
 
-public class Destop extends Computer {
+import jakarta.persistence.Entity;
+
+@Entity
+public class Desktop extends Computer {
 
     private String brand;
     private String price;
@@ -19,6 +22,11 @@ public class Destop extends Computer {
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Desktop [brand=" + brand + ", price=" + price + "]";
     }
 
 }
