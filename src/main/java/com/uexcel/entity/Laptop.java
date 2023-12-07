@@ -25,7 +25,7 @@ public class Laptop extends Computer {
 
     @Override
     public String toString() {
-        return "Laptop [brand=" + brand + ", price=" + price + "]";
+        return "Laptop [brand=" + brand + ", name=" + name + ", price=" + price + "]";
     }
 
 }

@@ -15,7 +15,7 @@ import jakarta.persistence.MappedSuperclass;
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 // @Inheritance(strategy = InheritanceType.JOINED)
 // @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-public abstract class Computer {
+public class Computer {
     @Id
     protected long Id;
     protected String name;

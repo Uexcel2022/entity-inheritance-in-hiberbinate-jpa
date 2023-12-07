@@ -1,5 +1,7 @@
 package com.uexcel;
 
+import java.util.List;
+
 import org.hibernate.annotations.SourceType;
 
 import com.uexcel.entity.Computer;
@@ -29,15 +31,16 @@ public class App {
             // entityManager.persist(laptop);
             // entityManager.persist(desktop);
 
-            // String sql = "SELECT c FROM Computer c";
-            // entityManager.createQuery(sql, Computer.class)
+            String sql = "SELECT c FROM Computer c";
+            entityManager.createQuery(sql, Computer.class)
+                    .getResultList().forEach(System.out::println);
+
+            entityManager.getTransaction().commit();
+
+            // String sql = "SELECT c FROM Laptop c";
+            // entityManager.createQuery(sql, Laptop.class)
             // .getResultList().forEach(System.out::println);
             // entityManager.getTransaction().commit();
-
-            String sql = "SELECT c FROM Laptop c";
-            entityManager.createQuery(sql, Laptop.class)
-                    .getResultList().forEach(System.out::println);
-            entityManager.getTransaction().commit();
 
         } catch (Exception e) {
             e.printStackTrace();

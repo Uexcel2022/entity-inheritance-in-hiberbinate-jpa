@@ -26,7 +26,7 @@ public class Desktop extends Computer {
 
     @Override
     public String toString() {
-        return "Desktop [brand=" + brand + ", price=" + price + "]";
+        return "Desktop [brand=" + brand + ", name=" + name + ", price=" + price + "]";
     }
 
 }
